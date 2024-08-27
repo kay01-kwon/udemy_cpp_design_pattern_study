@@ -1,0 +1,5 @@
+cmake_minimum_required(VERSION 3.12)
+project(Section2_Solid_Design_Principles)
+
+add_executable(SingleRespPrinc src/SingleResponsibilityPrinciple.cpp)
+add_executable(OpenClosedPrinc src/OpenClosedPrinciple.cpp)
