@@ -16,3 +16,5 @@ add_executable(BuilderFacets
 src/BuilderFacets.cpp
 include/Person.cpp
 include/PersonBuilder.cpp)
+
+add_executable(excercise src/excercise.cpp)
