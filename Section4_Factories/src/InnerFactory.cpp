@@ -23,18 +23,24 @@ enum class PointType
 
 class Point
 {
+    private:
+
+    class PointFactory
+    {
+        public:
+        static Point NewCartesian(double x, double y)
+        {
+            return {x, y};
+        };
+
+        static Point NewPolar(double r, double theta)
+        {
+            return {r*cos(theta), r*sin(theta)};
+        }
+    };
+
+
     public:
-    Point(double x, double y): x_(x), y_(y){}
-
-    static Point NewCartesian(double x, double y)
-    {
-        return {x, y};
-    }
-
-    static Point NewPolar(double r, double theta)
-    {
-        return {r*cos(theta), r*sin(theta)};
-    }
 
     friend ostream& operator<<(ostream& os, const Point& obj)
     {
@@ -42,16 +48,22 @@ class Point
         return os;
     }
 
+    static PointFactory Factory;
+
     private:
+
+    Point(double x, double y): x_(x), y_(y){}
 
     double x_, y_;
 
 };
 
 
+
 int main()
 {
-    auto p = Point::NewPolar(5, M_PI_4);
+
+    auto p = Point::Factory.NewCartesian(3.0, 4.0);
 
     cout << p << endl;
 

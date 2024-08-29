@@ -8,3 +8,5 @@ include_directories(
 )
 
 add_executable(FactoryMethod src/FactoryMethod.cpp)
+add_executable(Factory src/Factory.cpp)
+add_executable(InnerFactory src/InnerFactory.cpp)

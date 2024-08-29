@@ -23,18 +23,10 @@ enum class PointType
 
 class Point
 {
+    friend class PointFactory;
     public:
     Point(double x, double y): x_(x), y_(y){}
 
-    static Point NewCartesian(double x, double y)
-    {
-        return {x, y};
-    }
-
-    static Point NewPolar(double r, double theta)
-    {
-        return {r*cos(theta), r*sin(theta)};
-    }
 
     friend ostream& operator<<(ostream& os, const Point& obj)
     {
@@ -48,10 +40,24 @@ class Point
 
 };
 
+struct PointFactory
+{
+    static Point NewCartesian(double x, double y)
+    {
+        return {x, y};
+    }
+
+    static Point NewPolar(double r, double theta)
+    {
+        return {r*cos(theta), r*sin(theta)};
+    }
+};
+
 
 int main()
 {
-    auto p = Point::NewPolar(5, M_PI_4);
+
+    auto p = PointFactory::NewPolar(5, M_PI_4);
 
     cout << p << endl;
 
