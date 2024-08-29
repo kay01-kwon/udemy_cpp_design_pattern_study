@@ -41,8 +41,15 @@ int main()
 
     DrinkFactory df;
 
-    auto c = df.make_drink("coffee");
+    cout << "DrinkFactory" << endl;
+
+    auto c = df.make_drink("tea");
     
+
+    DrinkWithVolumeFactory dvf;
+
+    cout << "DrinkWithVolumeFactory" << endl;
+    auto c2 = dvf.make_drink("coffee");
 
     return 0;
 }
