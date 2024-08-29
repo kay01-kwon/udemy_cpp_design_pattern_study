@@ -45,8 +45,8 @@ public:
   CodeBuilder& add_field(const string& name, const string& type)
   {
     // todo
-    CodeElement added_code_element_(name, type);
-    code_element_.elements_.emplace_back(added_code_element_);
+    CodeElement new_code_element(name, type);
+    code_element_.elements_.emplace_back(new_code_element);
     return *this;
   }
 
