@@ -16,3 +16,5 @@ add_executable(PrototypeFactory src/PrototypeFactory.cpp)
 
 add_executable(PrototypeSerialization src/PrototypeSerialization.cpp)
 target_link_libraries(PrototypeSerialization Boost::serialization)
+
+add_executable(excercise src/excercise.cpp)
