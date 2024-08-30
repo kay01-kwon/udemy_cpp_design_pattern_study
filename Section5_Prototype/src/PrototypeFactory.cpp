@@ -73,7 +73,7 @@ struct Contact{
     friend ostream& operator<<(ostream &os, const Contact &contact)
     {
         os << " Name: " << contact.name_
-        << " Address: " << *contact.address_;
+        << " Address: " << *(contact.address_);
 
         return os;
     }
