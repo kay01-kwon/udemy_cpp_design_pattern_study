@@ -8,3 +8,5 @@ include_directories(
 )
 
 add_executable(RecordKeeper src/RecordKeeper.cpp)
+add_executable(Prototype src/Prototype.cpp)
+add_executable(PrototypeFactory src/PrototypeFactory.cpp)
