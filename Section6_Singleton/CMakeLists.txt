@@ -27,3 +27,7 @@ add_executable(SingletonTest2
 target_link_libraries(SingletonTest2 
     ${GTEST_LIBRARIES} 
     pthread)
+
+
+add_executable(SingletonLifetime
+    src/SingletonLifetime.cpp)
