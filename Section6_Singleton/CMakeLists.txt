@@ -31,3 +31,6 @@ target_link_libraries(SingletonTest2
 
 add_executable(SingletonLifetime
     src/SingletonLifetime.cpp)
+
+add_executable(Multitone
+    src/Multitone.cpp)
