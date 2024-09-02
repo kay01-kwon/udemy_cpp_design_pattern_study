@@ -19,3 +19,11 @@ add_executable(SingletonTest
 target_link_libraries(SingletonTest 
     ${GTEST_LIBRARIES} 
     pthread)
+
+
+add_executable(SingletonTest2
+    src/SingletonDepInj.cpp)
+
+target_link_libraries(SingletonTest2 
+    ${GTEST_LIBRARIES} 
+    pthread)
