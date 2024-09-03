@@ -13,3 +13,7 @@ add_executable(Pimple
 
 add_executable(BridgeImpl
     src/BridgeImpl.cpp)
+
+
+add_executable(excercise
+    src/excercise.cpp)
