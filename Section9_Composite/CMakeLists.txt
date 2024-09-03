@@ -10,3 +10,6 @@ src/GeometricShapes.cpp)
 
 add_executable(NeuralNetworks
 src/NeuralNetworks.cpp)
+
+add_executable(ArrayBackedProperties
+src/ArrayBackedProperties.cpp)

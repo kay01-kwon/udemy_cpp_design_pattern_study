@@ -4,6 +4,7 @@
         "ostream": "cpp",
         "filesystem": "cpp",
         "string": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "array": "cpp"
     }
 }
