@@ -13,3 +13,6 @@ src/NeuralNetworks.cpp)
 
 add_executable(ArrayBackedProperties
 src/ArrayBackedProperties.cpp)
+
+add_executable(excercise 
+src/excercise.cpp)
