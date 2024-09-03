@@ -7,7 +7,8 @@
                 "/usr/include/**",
                 "/usr/include/c++/9/**",
                 "/usr/include/c++/9/bits/**",
-                "/usr/include/c++/8/bits/**"
+                "/usr/include/c++/8/bits/**",
+                "${workspaceFolder}/Section8_Bridge/include"
             ],
             "defines": [],
             "compilerPath": "/usr/bin/gcc",
