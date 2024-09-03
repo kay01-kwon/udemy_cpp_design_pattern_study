@@ -10,3 +10,6 @@ include_directories(
 add_executable(Pimple
     include/Person.cpp
     src/Pimple.cpp)
+
+add_executable(BridgeImpl
+    src/BridgeImpl.cpp)
