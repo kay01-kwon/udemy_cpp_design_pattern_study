@@ -7,3 +7,6 @@ include_directories(
 
 add_executable(GeometricShapes 
 src/GeometricShapes.cpp)
+
+add_executable(NeuralNetworks
+src/NeuralNetworks.cpp)
