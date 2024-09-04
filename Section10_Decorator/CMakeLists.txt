@@ -10,3 +10,6 @@ add_executable(DynamicDecorator
 
 add_executable(FunctionalDecorator
     src/FunctionalDecorator.cpp)
+
+add_executable(excercise 
+    src/excercise.cpp)
