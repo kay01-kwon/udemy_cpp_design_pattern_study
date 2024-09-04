@@ -7,3 +7,6 @@ include_directories(
 
 add_executable(DynamicDecorator
     src/DynamicDecorator.cpp)
+
+add_executable(FunctionalDecorator
+    src/FunctionalDecorator.cpp)
