@@ -4,3 +4,6 @@ project(Section12_Flyweight)
 
 add_executable(HandMadeFlyweight
     src/HandMadeFlyweight.cpp)
+
+add_executable(TextFormatter
+    src/TextFormatting.cpp)
