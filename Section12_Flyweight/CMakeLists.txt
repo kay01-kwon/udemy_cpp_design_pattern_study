@@ -7,3 +7,6 @@ add_executable(HandMadeFlyweight
 
 add_executable(TextFormatter
     src/TextFormatting.cpp)
+
+add_executable(excercise
+src/excercise.cpp)
