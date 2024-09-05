@@ -29,6 +29,7 @@ struct Creature
 
 };
 
+// Singlely linked list of CreatureModifier
 class CreatureModifier
 {
     public:
@@ -43,6 +44,8 @@ class CreatureModifier
 
     virtual void handle()
     {
+        // If next_ is not nullptr, 
+        // then call next_->handle()
         if(next_) next_->handle();
     }
 
@@ -67,6 +70,7 @@ class DoubleAttackModifier : public CreatureModifier
     void handle() override
     {
         creature_.attack_ *= 2;
+        // Call the base class handle() function
         CreatureModifier::handle();
     }
 
@@ -85,6 +89,7 @@ class IncreaseDefenseModifier : public CreatureModifier
         {
             creature_.defense_++;
         }
+        // Call the base class handle() function
         CreatureModifier::handle();
     }
 
