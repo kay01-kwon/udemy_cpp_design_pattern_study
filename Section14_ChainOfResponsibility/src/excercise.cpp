@@ -11,9 +11,14 @@ struct Game
   vector<Creature*> creatures;
 };
 
+enum class Statistic
+{
+    attack,
+    defense
+};
+
 struct StatQuery
 {
-  enum Statistic { attack, defense };
   Statistic statistic;
   int result;
 };
@@ -41,15 +46,15 @@ public:
 
     int get_attack() override {
         // todo
-        return get_statistic(StatQuery::attack);
+        return get_statistic(Statistic::attack);
     }
 
     int get_defense() override {
         // todo
-        return get_statistic(StatQuery::defense);
+        return get_statistic(Statistic::defense);
     }
 
-    int get_statistic(StatQuery::Statistic stat)
+    int get_statistic(Statistic stat)
     {
         StatQuery q{stat, 0};
         for (auto c : game.creatures)
@@ -63,10 +68,10 @@ public:
         {
             switch(sq.statistic)
             {
-                case StatQuery::attack:
+                case Statistic::attack:
                     sq.result += base_attack;
                     break;
-                case StatQuery::defense:
+                case Statistic::defense:
                     sq.result += base_defense;
                     break;
                 default:
@@ -75,7 +80,7 @@ public:
         }
         else
         {
-            if(sq.statistic == StatQuery::defense)
+            if(sq.statistic == Statistic::defense)
                 sq.result++;
         }
     }
@@ -90,7 +95,7 @@ public:
   // todo
     void query(void *source, StatQuery &sq) override
     {
-        if(source != this && sq.statistic == StatQuery::attack)
+        if(source != this && sq.statistic == Statistic::attack)
         {
             sq.result++;
         }
