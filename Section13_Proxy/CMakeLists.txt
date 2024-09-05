@@ -4,3 +4,5 @@ project(Section13_Proxy)
 add_executable(SmartPointer src/SmartPointer.cpp)
 
 add_executable(PropertyProxy src/PropertyProxy.cpp)
+
+add_executable(VirtualProxy src/VirtualProxy.cpp)
