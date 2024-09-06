@@ -72,11 +72,8 @@ vector<Token> lex(const string &input)
                         break;
                     }
                 }
-
-                break;
         }
     }
-
 
     return result;
 }
