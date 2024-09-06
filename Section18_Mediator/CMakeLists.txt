@@ -12,3 +12,5 @@ add_executable(ChatRoom
     include/Person.cpp
     include/ChatRoom.cpp
 )
+
+add_executable(excercise src/excercise.cpp)
