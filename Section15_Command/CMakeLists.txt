@@ -8,3 +8,5 @@ add_executable(Command src/Command.cpp)
 add_executable(UndoOperations src/UndoOperations.cpp)
 
 add_executable(Macro src/Macro.cpp)
+
+add_executable(excercise src/excercise.cpp)
