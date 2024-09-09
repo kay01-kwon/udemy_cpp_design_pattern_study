@@ -3,3 +3,4 @@ project(Section19_Memento)
 
 add_executable(Memento src/Memento.cpp)
 add_executable(Undo_redo src/Undo_redo.cpp)
+add_executable(excercise src/excercise.cpp)
