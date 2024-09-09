@@ -12,3 +12,5 @@ add_executable(observer_boost_signal src/observer_practice_with_boost_signal.cpp
 add_executable(problem_dependency src/problem_dependency.cpp)
 
 add_executable(Safer_observable src/thread_safety.cpp)
+
+add_executable(excercise src/excercise.cpp)
