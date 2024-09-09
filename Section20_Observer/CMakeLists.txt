@@ -6,3 +6,5 @@ include_directories(include)
 add_executable(observer_practice src/observer_practice.cpp)
 
 add_executable(observer_boost_signal src/observer_practice_with_boost_signal.cpp)
+
+add_executable(problem_dependency src/problem_dependency.cpp)
