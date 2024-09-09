@@ -4,3 +4,5 @@ project(Section21_State)
 add_executable(DynamicState src/DynamicState.cpp)
 
 add_executable(StateMachine src/StateMachine.cpp)
+
+add_executable(excercise src/excercise.cpp)
