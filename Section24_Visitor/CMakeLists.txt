@@ -4,3 +4,4 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(IntrusiveVisitor src/IntrusiveVisitor.cpp)
 add_executable(ReflectiveVisitor src/ReflectiveVisitor.cpp)
+add_executable(ClassicVisitor src/ClassicVisitor.cpp)
