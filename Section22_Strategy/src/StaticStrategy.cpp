@@ -52,6 +52,7 @@ struct HtmlListStrategy : ListStrategy
     }
 };
 
+template <typename LS>
 struct TextProcessor
 {
 
@@ -63,50 +64,31 @@ struct TextProcessor
 
     void append_list(const vector<string> &items)
     {
-        list_strategy_->start(oss_);
+        list_strategy_.start(oss_);
         for(auto &item : items)
-            list_strategy_->add_list_item(oss_, item);
-        list_strategy_->end(oss_);
-    }
-
-    void set_output_format(const OutputFormat &format)
-    {
-        switch( format )
-        {
-            case OutputFormat::Markdown :
-                list_strategy_ = make_unique<MarkdownListStrategy>();
-                break;
-            case OutputFormat::Html :
-                list_strategy_ = make_unique<HtmlListStrategy>();
-                break;
-            default:
-                break;
-        }
+            list_strategy_.add_list_item(oss_, item);
+        list_strategy_.end(oss_);
     }
 
     string str() const { return oss_.str();}
 
     private:
         ostringstream oss_;
-        unique_ptr<ListStrategy> list_strategy_;
+        LS list_strategy_;
 
 };
 
 int main()
 {
-    vector<string> items{"foo", "bar", "baz"};
+    // Markdown
+    TextProcessor<MarkdownListStrategy> tpm;
+    tpm.append_list({"foo", "bar", "baz"});
+    cout << tpm.str() << endl;
 
-    TextProcessor tp;
-
-    tp.set_output_format(OutputFormat::Markdown);
-    tp.append_list(items);
-    cout << tp.str() << endl;
-    
-    tp.clear();
-    tp.set_output_format(OutputFormat::Html);
-    tp.append_list(items);
-    cout << tp.str() << endl;
-
+    // HTML
+    TextProcessor<HtmlListStrategy> tph;
+    tph.append_list({"foo", "bar", "baz"});
+    cout << tph.str() << endl;
 
     return 0;
 }
